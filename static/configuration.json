@@ -1,15 +1,1 @@
-{
-    "githubUsername": "conanluo",
-    "blogTitle": "Conan's Blog",
-    "blogDescribe": "欢迎来到Conan的个人博客。",
-    "htmlTitle": "Conan的博客",
-    "fontColor": "#ffffff",
-    "useBackgroundImage": false,
-    "backgroundColorLeft": "#2690F9",
-    "backgroundColorRight": "#FC2D2D",
-    "audioUrl": "http://19333474.170.ctc.data.tv002.com/down/f75bffb73b473d1c1429737b8060249e/%E9%99%88%E5%A5%95%E8%BF%85%20-%20%E6%B8%90%E6%B8%90.mp3?cts=dx-f-D67A160A226A199F69b29&ctp=67A160A226A199&ctt=1561226623&limit=1&spd=90000&ctk=f75bffb73b473d1c1429737b8060249e&chk=fc0e32392ec45e67dd43639afce34839-11146116&mtd=1",
-    "mini": false,
-    "webSites":[
-        {"name":"v2ex" , "url":"https://www.v2ex.com/member/laziji"}
-    ]
-}
+{"githubUsername":"conanluo","blogTitle":"Conan's Blog","blogDescribe":"欢迎来到Conan的个人博客。","htmlTitle":"Conan的博客","fontColor":"#ffffff","useBackgroundImage":false,"backgroundColorLeft":"#2690F9","backgroundColorRight":"#FC2D2D","audioUrl":"http://19333474.170.ctc.data.tv002.com/down/f75bffb73b473d1c1429737b8060249e/%E9%99%88%E5%A5%95%E8%BF%85%20-%20%E6%B8%90%E6%B8%90.mp3?cts=dx-f-D67A160A226A199F69b29&ctp=67A160A226A199&ctt=1561226623&limit=1&spd=90000&ctk=f75bffb73b473d1c1429737b8060249e&chk=fc0e32392ec45e67dd43639afce34839-11146116&mtd=1","mini":true,"webSites":[{"name":"v2ex","url":"https://www.v2ex.com/member/laziji"}]}
