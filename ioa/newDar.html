@@ -10,6 +10,7 @@
     <textarea name="" id="prts" cols="30" rows="10"></textarea>
     <button id="check">check</button><br>
     <textarea id="result" style="width:100%;height:100px"></textarea>
+    <div id="unSetUp"></div>
     
 </body>
 </html>
@@ -788,9 +789,10 @@ console.log(prts)
     }
     //console.log(str)
 
-    console.log("-------------\n"+unde)
-
+   
     $("#result").val(str)
+    for(let i=0;i<unde.length;i++){
+        $("#unSetUp").html($("#unSetUp").html()+"<br>"+unde[i])
 })
 })
 </script>
