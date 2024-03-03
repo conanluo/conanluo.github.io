@@ -771,9 +771,13 @@ $(document).ready(function() {
     $("#check").click(function(){
         let isNeedTranspo=true;
         prtsArr=$("#prts").val().split("\n")
+
         
         for(let i=0;i<prtsArr.length;i++){
             let prts=prtsArr[i].split("\t")[1]
+            if(prts.indexOf("DOB")>-1){
+                prts=prts.split(" DOB")[0];
+            }
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
