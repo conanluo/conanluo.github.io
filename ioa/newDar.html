@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <textarea name="" id="prts" cols="30" rows="10"></textarea>
-    <button id="check">check</button><br>
+    <textarea name="" id="prts" cols="90" rows="10"></textarea>
+    <button id="check">check</button><button id="reset">clear</button><br>
     <textarea id="result" style="width:100%;height:100px"></textarea>
     <div id="unSetUp"></div>
     
@@ -790,12 +790,25 @@ $(document).ready(function() {
             }
         }
         //console.log(str)
-    
+        
        
         $("#result").val(str)
         for(let i=0;i<unde.length;i++){
             $("#unSetUp").html($("#unSetUp").html()+"<Br>"+(i+1)+"."+unde[i].toUpperCase())
         }
+
+
+       
+
+    
+    })
+
+    //reset button
+    $("#reset").click(function(){
+        $("#result").val("");
+        $("#unSetUp").html("");
+        $("#prts").val("");
+        
     })
 })
 </script>
