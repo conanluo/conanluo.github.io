@@ -8,7 +8,7 @@
 </head>
 <body>
     <textarea name="" id="prts" cols="90" rows="10"></textarea>
-    <button id="check">check</button><button id="reset">clear</button><br>
+    <button id="check">check</button><button id="med">check</button><button id="reset">clear</button><br>
     <textarea id="result" style="width:100%;height:100px"></textarea>
     <div id="unSetUp"></div>
     
@@ -791,19 +791,40 @@ $(document).ready(function() {
             }
         }
         //console.log(str)
-        
        
         $("#result").val(str)
         for(let i=0;i<unde.length;i++){
             $("#unSetUp").html($("#unSetUp").html()+"<Br>"+(i+1)+"."+unde[i].toUpperCase())
-        }
-
-
-       
-
-    
+        }    
     })
 
+    
+    $("#med").click(function(){
+        let isNeedTranspo=true;
+        prtsArr=$("#prts").val().split("\n")
+        
+        for(let i=0;i<prtsArr.length;i++){
+            let prts=prtsArr[i].split("\t")[1]
+            if(prts.indexOf("DOB")>-1){
+                prts=prts.split(" DOB")[0];
+            }
+            let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
+            if(isNeedTranspo){
+                let prtID=obj[prts.toUpperCase()]+""
+                if(prtID==="undefined"){
+                    unde.push(prts)
+                }else{
+                    str+=prtID+"\t1530\t490078\t"+prtID+"\tMedication\t80\n"
+                }
+            }
+        }
+        //console.log(str)
+       
+        $("#result").val(str)
+        for(let i=0;i<unde.length;i++){
+            $("#unSetUp").html($("#unSetUp").html()+"<Br>"+(i+1)+"."+unde[i].toUpperCase())
+        }    
+    })
     //reset button
     $("#reset").click(function(){
         $("#result").val("");
