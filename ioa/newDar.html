@@ -770,9 +770,9 @@ $(document).ready(function() {
     let str=""
     let unde=[]
     $("#check").click(function(){
+        let tempPrtArr=[]
         let isNeedTranspo=true;
         prtsArr=$("#prts").val().split("\n")
-
         
         for(let i=0;i<prtsArr.length;i++){
             let prts=prtsArr[i].split("\t")[1]
@@ -782,6 +782,11 @@ $(document).ready(function() {
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
+                if(tempPrtArr.indexOf(prtID)<0){
+                    tempPrtArr.puch(prtID);
+                }else{
+                    continue;
+                }
                 if(prtID==="undefined"){
                     unde.push(prts)
                 }else{
