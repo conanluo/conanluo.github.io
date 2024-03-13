@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="./bootstrap.css" rel="stylesheet">
+    <script src="js/jq.js"></script>
+    <script src="./bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+           color:black;
+        }
+        .border{
+           padding-left:5px;
+           padding-right:5px;
+        }
+        #date{
+           width:690px;
+           text-align:center;
+           padding:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="date" style="width:690px;text-align:center"></div>
+        <div id="table" style="width:690px;margin-left:90px"></div>
+    </div>
+</body>
+</html>
+<script>
+    let orderBy=false; //if orderBy == false, orderBy Route# otherwise order by Name 
+
+
+    (function($){
+        $.getUrlParam = function(name){
+            var reg = new RegExp("(^|&)" + name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r!=null) return unescape(r[2]); return null;
+        }
+    })(jQuery);
+
+    function whichRoom(prt){
+
+
+        return prt;
+    }
+    function isWheelchair(prt){
+
+        return "-";
+    }
+
+    function createTable(arr,tableHtml){
+        let boder_style='border-secondary';
+        let bg_style='bg-dark-subtle';
+        tableHtml = `<table style="border:1px">
+                         <tr>
+                            <!--<th class="border border-dark ${bg_style}"></th>-->
+                            <th class="border border-dark ${bg_style}">Prt</th>
+                            <th class="border border-dark ${bg_style}">Rt#</th>
+                            <th class="border border-dark ${bg_style}">W</th>
+  
+                            <th class="border border-dark ${bg_style}">&nbsp;</th>
+                            <!--<th class="border border-dark ${bg_style}"></th>-->
+                            <th class="border border-dark ${bg_style}">Prt</th>
+                            <th class="border border-dark ${bg_style}">Rt#</th>
+                            <th class="border border-dark ${bg_style}">W</th>
+                         </tr>`;
+
+        let row=arr.length/2+.6
+        for(let i=0;i<row;i++){
+            let r = parseInt(i + row);
+            //left side
+            tableHtml += `<tr style="color:black">
+                <!--<td>${i}</td>-->
+                <td class="border border-dark">${arr[i][0]}</td>
+                <td class="border border-dark">${arr[i][1]}</td>
+                <td class="border border-dark">${arr[i][2]}</td>
+                <td class="border border-dark ${bg_style}"></td>`
+            //right side
+            
+            let r_prt="",r_rtNum="",r_wheelchair=""
+            if(r<arr.length){
+                r_prt=arr[r][0];
+                r_rtNum=arr[r][1];
+                r_wheelchair=arr[r][2]
+                
+            }
+            tableHtml+=`<!--<td>${r}</td>-->
+                <td class="border border-dark">${r_prt}</td>
+                <td class="border border-dark">${r_rtNum}</td>
+                <td class="border border-dark">${r_wheelchair}</td>
+            `
+        }
+
+
+        tableHtml+="</table>"
+
+        $("#table").html(tableHtml)
+    }
+
+    $(function(){
+
+
+        let param=$.getUrlParam("arr");
+        let tableHtml="";
+    param=`[undefined,["Chen, Annie","Chin, Ang Lin","Leung, Hung Chun","Ly, Kha Chay","Pho, Lina","Quach, Miles","Zhang, De Zhen"],["Godinez, Luis","Hernandez, Victoria","Lee, Gertrude","Lee, Lap Chow"],undefined,["Cao, Wan Ran","Pugh, Michael","Rodriguez, Carmelo S","Wang, You Lan"],["Kwock, Ying Bing","Macdonald, Christopher","Montoya, Luis Alonzo"],["Huang Tam, Gui Ying","Wong, Fung Ying"],["Wong, Shou Chu"],["Gu, Guan Qun","Hellam, Ruben A","Huang, Chien Chien","Hubbard, Charlotte","Hwang, Soon","Logan, Venitta","Pal, Gary"],["Chiang, Kuo Hsiun","Li, Yan Zhi","Ly, Mui","Wong, Iris","Ye, Hui Juan"],["Chan, Suk Ching","Chung, Isaac I","Chung, Suk W","Lea, Lai Chuen","Lee, Har Tam","Lee, Ngan Chu","Ly, Ha Bich","Siu, Wah Bik B"],["Leung, Hung Chun","Pal, Gary"],["Lee, Choi Kuen","Ly, Trung","Yu, Thomas","Zavaleta, Dora"],undefined]`
+        let pmArr=eval(param)
+        //console.log(param)
+
+        let today=new Date();
+        $("#date").html((today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear())
+
+        // 将原始数据组合成一个按车排序的数组,方便制表        
+        let byRouteArr=[];
+        for(let i=1;i<pmArr.length-1;i++){
+            if(pmArr[i]===undefined) continue;
+            for(let j=0;j<pmArr[i].length;j++){
+                let tempPrt=pmArr[i][j]
+                let r=i
+                r=i==11?"Joe":i==12?"Wilson":r;
+                byRouteArr.push([tempPrt,r,isWheelchair(tempPrt)]);
+            }
+        }
+        // 新建一个按名排序的数组
+        let byNameArr=[...byRouteArr]
+        byNameArr.sort()
+
+
+        //console.log(byRouteArr,byRouteArr.length)
+        
+        
+        let tableArr=[...byRouteArr];//制表时候用的表
+        createTable(tableArr)
+
+        $("#date").click(function(){
+            orderBy=!orderBy;
+            $("#table").html("")
+            if(orderBy){
+                createTable(byNameArr)
+            }else{
+                createTable(byRouteArr)
+            }
+        })
+    })
+</script>
