@@ -38,7 +38,7 @@ let prtObjInfo={"Abele, Arija":{"id":"189059","room":"","rt":"","comeDay":"","ad
 "Chan, Phillip":{"id":"180886","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Chan, Shirlena":{"id":"193244","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Chan, Sook Wah":{"id":"173301","room":"","rt":"","comeDay":"","address":"","amTime":""},
-"Chan, Suk Ching":{"id":"PC30388","room":"","rt":"","comeDay":"","address":"","amTime":""},
+"Chan, Suk Ching":{"id":"PC8544","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Chan, Sylvia W":{"id":"PC11099","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Chan, Wai Hing":{"id":"693594","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Chang, Judy":{"id":"PC7569","room":"","rt":"","comeDay":"","address":"","amTime":""},
