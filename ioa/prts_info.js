@@ -233,7 +233,7 @@ let prtObjInfo={"Abele, Arija":{"id":"189059","room":"","rt":"","comeDay":"","ad
 "Martinez, Antoinette I":{"id":"PC23199","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Martinez, Benedict":{"id":"PC14432","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Martinez, Lawrence":{"id":"694085","room":"","rt":"","comeDay":"","address":"","amTime":""},
-"Matosich, Helen":{"id":"694091","room":"","rt":"","comeDay":"","address":"","amTime":""},
+"Matosich, Helen A":{"id":"694091","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Matsuo, Emiko":{"id":"694092","room":"2","rt":"8","comeDay":"","address":"","amTime":""},
 "Mccarthy, Steven":{"id":"PC15386","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Mckean, Rosemary":{"id":"536353","room":"","rt":"","comeDay":"","address":"","amTime":""},
