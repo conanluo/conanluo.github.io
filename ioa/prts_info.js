@@ -77,7 +77,7 @@ let prtObjInfo={"Abele, Arija":{"id":"189059","room":"","rt":"","comeDay":"","ad
 "Cornel, Rebecca":{"id":"490378","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Cruz, Ruben D":{"id":"PC11212","room":"2","rt":"","comeDay":"","address":"","amTime":""},
 "Curry, James":{"id":"693660","room":"","rt":"","comeDay":"","address":"","amTime":""},
-"Dang, Ly K":{"id":"PC31425","room":"1","rt":"9","comeDay":"","address":"","amTime":""},
+"Dang, Ly K":{"id":"597823","room":"1","rt":"9","comeDay":"","address":"","amTime":""},
 "Dang, Tony":{"id":"693664","room":"","rt":"","comeDay":"","address":"","amTime":""},
 "Dao, Ngoc Tu":{"id":"693665","room":"2","rt":"8","comeDay":"","address":"","amTime":""},
 "Dao, Tran Tu":{"id":"693666","room":"2","rt":"8","comeDay":"","address":"","amTime":""},
