@@ -32,7 +32,7 @@
 </html>
 <script>
     //alert(prtObjInfo["Ma, Cui Hua"])
-    let orderBy=0; //if orderBy == false, orderBy Route# otherwise order by Name 
+    let orderBy=0; //if 0 
 
 
     (function($){
@@ -47,7 +47,7 @@
         let tempPrt="{@}"+prt
 
         if(prtObjInfo[prt]){
-            tempPrt=prtObjInfo[prt].room+tempPrt
+            tempPrt=prtObjInfo[prt].room+tempPrt+"☀🌟🌙"
         }
 
         return tempPrt;
@@ -57,52 +57,70 @@
         return "-";
     }
 
-    function createTable(arr,tableHtml){
+    function createTable(arr,tableHtml,isRoom){
         let boder_style='border-secondary';
         let bg_style='bg-dark-subtle';
-        tableHtml = `<table style="border:1px">
-                         <tr>
-                            <!--<th class="border border-dark ${bg_style}"></th>-->
-                            <th class="border border-dark ${bg_style}">Prt</th>
-                            <th class="border border-dark ${bg_style}">Rt#</th>
-                            <th class="border border-dark ${bg_style}">W</th>
-  
-                            <th class="border border-dark ${bg_style}">&nbsp;</th>
-                            <!--<th class="border border-dark ${bg_style}"></th>-->
-                            <th class="border border-dark ${bg_style}">Prt</th>
-                            <th class="border border-dark ${bg_style}">Rt#</th>
-                            <th class="border border-dark ${bg_style}">W</th>
-                         </tr>`;
-
-        let row=parseInt(arr.length/2+.6)
-        for(let i=0;i<row;i++){
-            let r = parseInt(i + row);
-            //left side
-            tableHtml += `<tr style="color:black">
-                <!--<td>${i}</td>-->
-                <td class="border border-dark">${arr[i][0]}</td>
-                <td class="border border-dark">${arr[i][1]}</td>
-                <td class="border border-dark">${arr[i][2]}</td>
-                <td class="border border-dark ${bg_style}"></td>`
-            //right side
+        let tableHtml=""
+        if(isRoom){
+            let tempTableHtml = `<table style="border:1px">
+                             <tr>
+                                <!--<th class="border border-dark ${bg_style}"></th>-->
+                                <th class="border border-dark ${bg_style}">Prt</th>
+                                <th class="border border-dark ${bg_style}">Rt#</th>
+                                <th class="border border-dark ${bg_style}">W</th>
+      
+                                <th class="border border-dark ${bg_style}">&nbsp;</th>
+                                <!--<th class="border border-dark ${bg_style}"></th>-->
+                                <th class="border border-dark ${bg_style}">Prt</th>
+                                <th class="border border-dark ${bg_style}">Rt#</th>
+                                <th class="border border-dark ${bg_style}">W</th>
+                             </tr>`;
             
-            let r_prt="",r_rtNum="",r_wheelchair=""
-            if(r<arr.length){
-                r_prt=arr[r][0];
-                r_rtNum=arr[r][1];
-                r_wheelchair=arr[r][2]
+            
+        }else{
+            tableHtml = `<table style="border:1px">
+                             <tr>
+                                <!--<th class="border border-dark ${bg_style}"></th>-->
+                                <th class="border border-dark ${bg_style}">Prt</th>
+                                <th class="border border-dark ${bg_style}">Rt#</th>
+                                <th class="border border-dark ${bg_style}">W</th>
+      
+                                <th class="border border-dark ${bg_style}">&nbsp;</th>
+                                <!--<th class="border border-dark ${bg_style}"></th>-->
+                                <th class="border border-dark ${bg_style}">Prt</th>
+                                <th class="border border-dark ${bg_style}">Rt#</th>
+                                <th class="border border-dark ${bg_style}">W</th>
+                             </tr>`;
+    
+            let row=parseInt(arr.length/2+.6)
+            for(let i=0;i<row;i++){
+                let r = parseInt(i + row);
+                //left side
+                tableHtml += `<tr style="color:black">
+                    <!--<td>${i}</td>-->
+                    <td class="border border-dark">${arr[i][0]}</td>
+                    <td class="border border-dark">${arr[i][1]}</td>
+                    <td class="border border-dark">${arr[i][2]}</td>
+                    <td class="border border-dark ${bg_style}"></td>`
+                //right side
                 
+                let r_prt="",r_rtNum="",r_wheelchair=""
+                if(r<arr.length){
+                    r_prt=arr[r][0];
+                    r_rtNum=arr[r][1];
+                    r_wheelchair=arr[r][2]
+                    
+                }
+                tableHtml+=`<!--<td>${r}</td>-->
+                    <td class="border border-dark">${r_prt}</td>
+                    <td class="border border-dark">${r_rtNum}</td>
+                    <td class="border border-dark">${r_wheelchair}</td>
+                `
             }
-            tableHtml+=`<!--<td>${r}</td>-->
-                <td class="border border-dark">${r_prt}</td>
-                <td class="border border-dark">${r_rtNum}</td>
-                <td class="border border-dark">${r_wheelchair}</td>
-            `
+    
+    
+            tableHtml+="</table>"
         }
-
-
-        tableHtml+="</table>"
-
         $("#table").html(tableHtml)
     }
 
@@ -142,11 +160,11 @@
         $("#date").click(function(){
             orderBy++;
             $("#table").html("")
-            if(orderBy%3==0){
+            if(orderBy%3==0){// by Room and name
+                createTable(byNameArr,true) 
+            }else if(orderBy%3==1){// by name only
                 createTable(byNameArr)
-            }else if(orderBy%3==1){
-                createTable(byRouteArr)
-            }else if(orderBy%3==2){
+            }else if(orderBy%3==2){// by route
                 createTable(byRouteArr)
             }
         })
