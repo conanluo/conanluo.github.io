@@ -32,7 +32,7 @@
 </html>
 <script>
     alert(prtObjInfo["Ma, Cui Hua"])
-    let orderBy=false; //if orderBy == false, orderBy Route# otherwise order by Name 
+    let orderBy=0; //if orderBy == false, orderBy Route# otherwise order by Name 
 
 
     (function($){
@@ -136,11 +136,13 @@
         createTable(tableArr)
 
         $("#date").click(function(){
-            orderBy=!orderBy;
+            orderBy++;
             $("#table").html("")
-            if(orderBy){
+            if(orderBy%3==0){
                 createTable(byNameArr)
-            }else{
+            }else if(orderBy%3==1){
+                createTable(byRouteArr)
+            else if(orderBy%3==2){
                 createTable(byRouteArr)
             }
         })
