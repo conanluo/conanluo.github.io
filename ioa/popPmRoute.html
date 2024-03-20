@@ -46,8 +46,8 @@
     function whichRoom(prt){
         let tempPrt="{@}"+prt
 
-        if(prtObjInfo[tempPrt]){
-            tempPrt=prtObjInfo[tempPrt].room+tempPrt
+        if(prtObjInfo[prt]){
+            tempPrt=prtObjInfo[prt].room+tempPrt
         }
 
         return tempPrt;
