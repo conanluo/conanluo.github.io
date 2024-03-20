@@ -41,8 +41,8 @@ let prtObjInfo = {
     },
     "Anies, Cristeta": {
         "id": "693470",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "8",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -257,8 +257,8 @@ let prtObjInfo = {
     },
     "Chan, David": {
         "id": "PC11090",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "10",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -361,8 +361,8 @@ let prtObjInfo = {
     },
     "Chau, Polo": {
         "id": "633043",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "4",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -457,8 +457,8 @@ let prtObjInfo = {
     },
     "Chiang, Kuo Hsiun": {
         "id": "PC27880",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "9",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -753,7 +753,7 @@ let prtObjInfo = {
     },
     "Fischer, Felizitas": {
         "id": "693736",
-        "room": "2",
+        "room": "3",
         "rt": "2",
         "comeDay": "",
         "address": "",
@@ -761,7 +761,7 @@ let prtObjInfo = {
     },
     "Fung, Lai King": {
         "id": "693757",
-        "room": "1",
+        "room": "2",
         "rt": "5",
         "comeDay": "",
         "address": "",
@@ -1289,7 +1289,7 @@ let prtObjInfo = {
     },
     "Lau, Kitwan": {
         "id": "PC8531",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1337,7 +1337,7 @@ let prtObjInfo = {
     },
     "Lee, Fung": {
         "id": "173155",
-        "room": "1",
+        "room": "2",
         "rt": "8",
         "comeDay": "",
         "address": "",
@@ -1385,15 +1385,15 @@ let prtObjInfo = {
     },
     "Lee, May Jean J": {
         "id": "PC11607",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "6",
         "comeDay": "",
         "address": "",
         "amTime": ""
     },
     "Lee, Mui Chun": {
         "id": "173319",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1857,8 +1857,8 @@ let prtObjInfo = {
     },
     "Martinez, Antoinette I": {
         "id": "PC23199",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "2",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -1873,8 +1873,8 @@ let prtObjInfo = {
     },
     "Martinez, Lawrence Benedict": {
         "id": "694085",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "11",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -1961,8 +1961,8 @@ let prtObjInfo = {
     },
     "Montoya, Luis Alonzo": {
         "id": "PC11846",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "5",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2241,8 +2241,8 @@ let prtObjInfo = {
     },
     "Pugh, Michael": {
         "id": "PC18970",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "4",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2305,8 +2305,8 @@ let prtObjInfo = {
     },
     "Romero, Judith": {
         "id": "694318",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "2",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2353,8 +2353,8 @@ let prtObjInfo = {
     },
     "Siu, Wah Bik B": {
         "id": "PC12100",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "10",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2457,8 +2457,8 @@ let prtObjInfo = {
     },
     "Tang, Kok Fang": {
         "id": "490311",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "6",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2497,8 +2497,8 @@ let prtObjInfo = {
     },
     "The, Siang Hoei": {
         "id": "PC12157",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "1",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2537,24 +2537,24 @@ let prtObjInfo = {
     },
     "Tran, Hong": {
         "id": "PC8550",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "9",
         "comeDay": "",
         "address": "",
         "amTime": ""
     },
     "Tran, Hong Thu": {
         "id": "PC12174",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "9",
         "comeDay": "",
         "address": "",
         "amTime": ""
     },
     "Tran, Lien T": {
         "id": "PC24413",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "8",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -3137,8 +3137,8 @@ let prtObjInfo = {
     },
     "Zavaleta, Dora": {
         "id": "PC12433",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "3",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -3161,8 +3161,8 @@ let prtObjInfo = {
     },
     "Zhang, De Zhen": {
         "id": "694565",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "1",
         "comeDay": "",
         "address": "",
         "amTime": ""
