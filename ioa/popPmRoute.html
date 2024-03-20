@@ -104,7 +104,7 @@
                 //left side
                 tableHtml += `<tr style="color:black">
                     <!--<td>${i}</td>-->
-                    <td class="border border-dark">${arr[i][0].split("{@}")[1]}</td>
+                    <td class="border border-dark">${arr[i][0].replace("{@}","")}</td>
                     <td class="border border-dark">${arr[i][1]}</td>
                     <td class="border border-dark">${arr[i][2]}</td>
                     <td class="border border-dark ${bg_style}"></td>`
@@ -118,7 +118,7 @@
                     
                 }
                 tableHtml+=`<!--<td>${r}</td>-->
-                    <td class="border border-dark">${r_prt}</td>
+                    <td class="border border-dark">${r_prt.replace("{@}","")}</td>
                     <td class="border border-dark">${r_rtNum}</td>
                     <td class="border border-dark">${r_wheelchair}</td>
                 `
