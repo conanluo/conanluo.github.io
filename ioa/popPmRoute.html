@@ -47,7 +47,10 @@
         let tempPrt="{@}"+prt
 
         if(prtObjInfo[prt]){
-            tempPrt=prtObjInfo[prt].room+tempPrt+"☀🌟🌙"
+            let room=prtObjInfo[prt].room
+                room=room==1?"☀":room==2?"🌟":"🌙"
+            
+            tempPrt=room+tempPrt
         }
 
         return tempPrt;
