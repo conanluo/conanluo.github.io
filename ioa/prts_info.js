@@ -145,8 +145,8 @@ let prtObjInfo = {
     },
     "Briggs, Sharon": {
         "id": "490028",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "1",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -609,7 +609,7 @@ let prtObjInfo = {
     },
     "Cornel, Rebecca": {
         "id": "490378",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1617,7 +1617,7 @@ let prtObjInfo = {
     },
     "Llerena, Sylvia": {
         "id": "PC25007",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -2265,7 +2265,7 @@ let prtObjInfo = {
     },
     "Randleston, Edward C": {
         "id": "694276",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -3049,7 +3049,7 @@ let prtObjInfo = {
     },
     "Young, John": {
         "id": "PC30592",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
