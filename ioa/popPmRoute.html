@@ -44,9 +44,13 @@
     })(jQuery);
 
     function whichRoom(prt){
+        let tempPrt="{@}"+prt
 
+        if(prtObjInfo[tempPrt]){
+            tempPrt=prtObjInfo[tempPrt].room+tempPrt
+        }
 
-        return prt;
+        return tempPrt;
     }
     function isWheelchair(prt){
 
@@ -121,7 +125,7 @@
                 let tempPrt=pmArr[i][j]
                 let r=i
                 r=i==11?"Joe":i==12?"Wilson":r;
-                byRouteArr.push([tempPrt,r,isWheelchair(tempPrt)]);
+                byRouteArr.push([whichRoom(tempPrt),r,isWheelchair(tempPrt)]);
             }
         }
         // 新建一个按名排序的数组
