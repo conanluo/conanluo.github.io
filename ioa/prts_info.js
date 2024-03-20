@@ -345,7 +345,7 @@ let prtObjInfo = {
     },
     "Chang, Judy": {
         "id": "PC7569",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1871,7 +1871,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Martinez, Lawrence": {
+    "Martinez, Lawrence Benedict": {
         "id": "694085",
         "room": "",
         "rt": "",
