@@ -48,7 +48,8 @@
 
         if(prtObjInfo[prt]){
             let room=prtObjInfo[prt].room
-                room=room==1?"☀":room==2?"🌟":"🌙"
+            
+            room=room==1?"☀":room==2?"🌟":"🌙"
             
             tempPrt=room+tempPrt
         }
@@ -60,7 +61,7 @@
         return "-";
     }
 
-    function createTable(arr,tableHtml,isRoom){
+    function createTable(arr,isRoom){
         let boder_style='border-secondary';
         let bg_style='bg-dark-subtle';
         let tableHtml=""
