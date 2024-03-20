@@ -545,8 +545,8 @@ let prtObjInfo = {
     },
     "Chu, Kenneth K": {
         "id": "633045",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "6",
         "comeDay": "",
         "address": "",
         "amTime": ""
