@@ -192,6 +192,7 @@
         $("#date").click(function(){
             const FORM_NUMBER=6;
             $("#table").html("")
+            orderBy++;
             console.log(orderBy%FORM_NUMBER)
             if(orderBy%FORM_NUMBER==0){// by name only
                 createTable(byNameArr)
@@ -219,7 +220,6 @@
                 //console.log("byRouteArr:"+byRouteArr)
             }
             
-            orderBy++;
         })
     })
 </script>
