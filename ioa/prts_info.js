@@ -1489,8 +1489,8 @@ let prtObjInfo = {
     },
     "Leung, Ricky H": {
         "id": "PC11637",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "5",
         "comeDay": "",
         "address": "",
         "amTime": ""
