@@ -361,7 +361,7 @@ let prtObjInfo = {
     },
     "Chau, Polo": {
         "id": "633043",
-        "room": "2",
+        "room": "1",
         "rt": "4",
         "comeDay": "",
         "address": "",
@@ -2401,7 +2401,7 @@ let prtObjInfo = {
     },
     "Sun, Ruilian": {
         "id": "173331",
-        "room": "1",
+        "room": "2",
         "rt": "6",
         "comeDay": "",
         "address": "",
