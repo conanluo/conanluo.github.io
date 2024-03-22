@@ -1063,6 +1063,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Hung, Mei Sheung": {
+        "id": "PC8523",
+        "room": "1",
+        "rt": "1",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Huynh, Hi": {
         "id": "PC8524",
         "room": "1",
