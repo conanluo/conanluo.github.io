@@ -74,12 +74,11 @@
         let tableHtml=""
         if(isRoom){
             //$("#date").html(".")
-            let tempTableHtml1 = `<table style="border:1px"><tr><th colspan="3" style="text-align: center"> `
-            let tempTableHtml2=todayDate+`</th></tr><tr><!--<th class="border border-dark ${bg_style}"></th>--><th class="border border-dark ${bg_style}">Prt</th><th class="border border-dark ${bg_style}">Rt#</th><th class="border border-dark ${bg_style}">W</th></tr>`;
+            let tempTableHtml = `<table style="border:1px"><tr><th colspan="3" style="text-align: center"> </th></tr><tr><!--<th class="border border-dark ${bg_style}"></th>--><th class="border border-dark ${bg_style}">Prt</th><th class="border border-dark ${bg_style}">Rt#</th><th class="border border-dark ${bg_style}">W</th></tr>`;
             
-            let sunTable=`<div class="childTable" id="sunRoom">`+tempTableHtml1+`☀Sun Room `+tempTableHtml2;            
-            let starTable=`<div class="childTable" id="starRoom">`+tempTableHtml1+`✨Star Room `+tempTableHtml2;
-            let moonTable=`<div class="childTable" id="moonRoom">`+tempTableHtml1+`🌙Moon Room `+tempTableHtml2;
+            let sunTable=`<div class="childTable" id="sunRoom">`+tempTableHtml;            
+            let starTable=`<div class="childTable" id="starRoom">`+tempTableHtml;
+            let moonTable=`<div class="childTable" id="moonRoom">`+tempTableHtml;
             let otherTable=tempTableHtml1+`other<br>`+tempTableHtml2;
             
             for(let i=0,j=1;i<arr.length;i++){
@@ -207,16 +206,19 @@
                 createTable(byNameArr,true)
                 $("#starRoom").hide()
                 $("#moonRoom").hide()
+                $("#date").text("☀Sun Room"+todayDate)
                 //console.log("byRouteArr:"+byRouteArr)
             }else if(orderBy%FORM_NUMBER==4){// by Star Room
                 createTable(byNameArr,true)
                 $("#sunRoom").hide()
                 $("#moonRoom").hide()
+                $("#date").text("✨Star Room"+todayDate)
                 //console.log("byRouteArr:"+byRouteArr)
             }else if(orderBy%FORM_NUMBER==5){// by Moon Room
                 createTable(byNameArr,true)
                 $("#starRoom").hide()
                 $("#sunRoom").hide()
+                $("#date").text("🌙Moon Room"+todayDate)
                 //console.log("byRouteArr:"+byRouteArr)
             }
             
