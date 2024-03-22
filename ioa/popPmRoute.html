@@ -21,19 +21,24 @@
            text-align:center;
            padding:10px 0;
         }
+        .childTable{ 
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <div id="main">
         <div id="date" style="width:690px;text-align:center"></div>
-        <div id="table" style="width:690px;margin-left:90px"></div>
+        <div id="table" style="margin-left:90px;display: flex;"></div>
     </div>
 </body>
 </html>
 <script>
     //alert(prtObjInfo["Ma, Cui Hua"])
     let orderBy=0; //if 0 
-
+    let today=new Date();
+    let todayDate=(today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
+        
 
     (function($){
         $.getUrlParam = function(name){
@@ -68,22 +73,41 @@
         let bg_style='bg-dark-subtle';
         let tableHtml=""
         if(isRoom){
-            let tempTableHtml = `<table style="border:1px">
-                             <tr>
-                                <!--<th class="border border-dark ${bg_style}"></th>-->
-                                <th class="border border-dark ${bg_style}">Prt</th>
-                                <th class="border border-dark ${bg_style}">Rt#</th>
-                                <th class="border border-dark ${bg_style}">W</th>
-      
-                                <th class="border border-dark ${bg_style}">&nbsp;</th>
-                                <!--<th class="border border-dark ${bg_style}"></th>-->
-                                <th class="border border-dark ${bg_style}">Prt</th>
-                                <th class="border border-dark ${bg_style}">Rt#</th>
-                                <th class="border border-dark ${bg_style}">W</th>
-                             </tr>`;
+            $("#date").html("-")
+            let tempTableHtml1 = `<table style="border:1px"><tr><th colspan="3" style="text-align: center"> `
+            let tempTableHtml2=todayDate+`</th></tr><tr><!--<th class="border border-dark ${bg_style}"></th>--><th class="border border-dark ${bg_style}">Prt</th><th class="border border-dark ${bg_style}">Rt#</th><th class="border border-dark ${bg_style}">W</th></tr>`;
             
+            let sunTable=`<div class="childTable">`+tempTableHtml1+`☀Sun Room<br>`+tempTableHtml2;            
+            let starTable=`<div class="childTable">`+tempTableHtml1+`✨Star Room<br>`+tempTableHtml2;
+            let moonTable=`<div class="childTable">`+tempTableHtml1+`🌙Moon Room<br>`+tempTableHtml2;
+            let otherTable=tempTableHtml1+`other<br>`+tempTableHtml2;
+            
+            for(let i=0,j=1;i<arr.length;i++){
+                let room=arr[i][0].split("{@}")[0]; // ☀✨🌙
+                let prtTr=`<tr style="color:black">
+                    <!--<td>${i}</td>-->
+                    <td class="border border-dark">${arr[i][0].replace("{@}","")}</td>
+                    <td class="border border-dark">${arr[i][1]}</td>
+                    <td class="border border-dark">${arr[i][2]}</td></tr>`
+                
+                if(room=="☀"){
+                    sunTable+=prtTr;
+                }else if(room=="✨"){
+                    starTable+=prtTr;
+                }else if(room=="🌙"){
+                    moonTable+=prtTr;
+                }else{
+                    otherTable+=prtTr;
+                }
+            }
+            sunTable+="</table></div>";
+            starTable+="</table></div>";
+            moonTable+="</table><br>"+otherTable+"<div>";
+
+            tableHtml=sunTable+starTable+moonTable
             
         }else{
+            $("#date").html(todayDate)
             tableHtml = `<table style="border:1px">
                              <tr>
                                 <!--<th class="border border-dark ${bg_style}"></th>-->
@@ -138,8 +162,7 @@
         let pmArr=eval(param)
         //console.log(param)
 
-        let today=new Date();
-        $("#date").html((today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear())
+       
 
         // 将原始数据组合成一个按车(带上房号)排序的数组,方便制表        
         let byRouteArr=[];
