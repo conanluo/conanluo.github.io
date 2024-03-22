@@ -193,15 +193,15 @@
             const FORM_NUMBER=6;
             $("#table").html("")
             console.log()
-            if(orderBy%FORM_NUMBER==0){// by Room and name
-                createTable(byNameArr,true)
-                //console.log("byNameArr:"+byNameArr)
-            }else if(orderBy%FORM_NUMBER==1){// by name only
+            if(orderBy%FORM_NUMBER==0){// by name only
                 createTable(byNameArr)
                 //console.log("byNameArr:"+byNameArr)
-            }else if(orderBy%FORM_NUMBER==2){// by route
+            }else if(orderBy%FORM_NUMBER==1){// by route
                 createTable(byRouteArr)
                 //console.log("byRouteArr:"+byRouteArr)
+            }else if(orderBy%FORM_NUMBER==2){// by Room and name
+                createTable(byNameArr,true)
+                //console.log("byNameArr:"+byNameArr)
             }else if(orderBy%FORM_NUMBER==3){// by Sun Room
                 createTable(byNameArr,true)
                 $("#starRoom").hide()
