@@ -193,13 +193,13 @@
             $("#table").html("")
             if(orderBy%3==0){// by Room and name
                 createTable(byNameArr,true)
-                console.log("byNameArr:"+byNameArr)
+                //console.log("byNameArr:"+byNameArr)
             }else if(orderBy%3==1){// by name only
                 createTable(byNameArr)
-                console.log("byNameArr:"+byNameArr)
+                //console.log("byNameArr:"+byNameArr)
             }else if(orderBy%3==2){// by route
                 createTable(byRouteArr)
-                console.log("byRouteArr:"+byRouteArr)
+                //console.log("byRouteArr:"+byRouteArr)
             }
         })
     })
