@@ -321,8 +321,8 @@ let prtObjInfo = {
     },
     "Chan, Suk Ching": {
         "id": "PC8544",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "10",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -1153,8 +1153,8 @@ let prtObjInfo = {
     },
     "Kerfoot, Lori J": {
         "id": "PC11511",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "6",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -1521,7 +1521,7 @@ let prtObjInfo = {
     },
     "Li, Kewu": {
         "id": "PC30036",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1561,7 +1561,7 @@ let prtObjInfo = {
     },
     "Liang, Huan Mei": {
         "id": "PC8535",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -2369,7 +2369,7 @@ let prtObjInfo = {
     },
     "Smiley, Patricia": {
         "id": "597820",
-        "room": "",
+        "room": "2",
         "rt": "",
         "comeDay": "",
         "address": "",
