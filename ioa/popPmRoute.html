@@ -12,24 +12,36 @@
         *{
            color:black;
         }
+       
         .border{
            padding-left:5px;
            padding-right:5px;
         }
+        #main{
+        }
         #date{
-           width:690px;
+           /*width:690px;*/
            text-align:center;
            padding:10px 0;
         }
+        #table{
+            display: flex;
+        }
+        .table_d{            
+            margin-left: 90px;
+        }
+        .table{
+            margin-left:15px
+        }
         .childTable{ 
-            margin: 10px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div id="date" style="width:690px;text-align:center"></div>
-        <div id="table" style="margin-left:90px;display: flex;"></div>
+        <div id="date"></div>
+        <div id="table"></div>
     </div>
 </body>
 </html>
@@ -75,7 +87,7 @@
         if(isRoom){
             //$("#date").html(".")
             let tempTableHtml1 = `<table style="border:1px"><tr><th colspan="3" style="text-align: center"> </th></tr>`
-            let tempTableHtml2 = `<tr><!--<th class="border border-dark ${bg_style}"></th>--><th class="border border-dark ${bg_style}">Prt</th><th class="border border-dark ${bg_style}">Rt#</th><th class="border border-dark ${bg_style}">W</th></tr>`;
+            let tempTableHtml2 = `<tr><!--<th class="border border-dark ${bg_style}"></th>--><th class="border border-dark ${bg_style}">Prt</th><th class="border border-dark ${bg_style}">Rt#</th></tr>`;
             
             let sunTable=`<div class="childTable" id="sunRoom">`+tempTableHtml1+tempTableHtml2;            
             let starTable=`<div class="childTable" id="starRoom">`+tempTableHtml1+tempTableHtml2;
@@ -87,8 +99,7 @@
                 let prtTr=`<tr style="color:black">
                     <!--<td>${i}</td>-->
                     <td class="border border-dark">${arr[i][0].replace("{@}","")}</td>
-                    <td class="border border-dark">${arr[i][1]}</td>
-                    <td class="border border-dark">${arr[i][2]}</td></tr>`
+                    <td class="border border-dark">${arr[i][1]}</td>`
                 
                 if(room=="☀"){
                     sunTable+=prtTr;
@@ -153,6 +164,8 @@
             tableHtml+="</table>"
         }
         $("#table").html(tableHtml)
+        $("#table").removeClass("table")
+        $("#table").addClass("table_d")
     }
 
     $(function(){
@@ -202,6 +215,8 @@
                 //console.log("byRouteArr:"+byRouteArr)
             }else if(orderBy%FORM_NUMBER==2){// by Room and name
                 createTable(byNameArr,true)
+                $("#table").addClass("table")
+                $("#table").removeClass("table_d")
                 //console.log("byNameArr:"+byNameArr)
             }else if(orderBy%FORM_NUMBER==3){// by Sun Room
                 createTable(byNameArr,true)
