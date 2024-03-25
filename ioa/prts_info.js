@@ -153,8 +153,8 @@ let prtObjInfo = {
     },
     "Burr, Sandra": {
         "id": "693544",
-        "room": "",
-        "rt": "",
+        "room": "2",
+        "rt": "4",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -801,7 +801,7 @@ let prtObjInfo = {
     },
     "Garcia, Agustin": {
         "id": "693766",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
