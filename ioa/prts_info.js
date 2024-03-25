@@ -1449,7 +1449,7 @@ let prtObjInfo = {
     },
     "Leung, Frank F": {
         "id": "PC11631",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1481,7 +1481,7 @@ let prtObjInfo = {
     },
     "Leung, Leisly L": {
         "id": "PC11634",
-        "room": "",
+        "room": "3",
         "rt": "",
         "comeDay": "",
         "address": "",
