@@ -782,10 +782,10 @@ $(document).ready(function() {
             console.log(prts==="Martinez, Lawrence Benedict"?"1111":"n")
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
-                let prtID=obj[prts.toUpperCase()]+""
+                let prtID=obj[prts.toUpperCase()]
 
                 
-                if(prtID==="undefined"){
+                if(prtID===undefined){
                     console.log("------"+prts)
                     unde.push(prts)
                 }else{
