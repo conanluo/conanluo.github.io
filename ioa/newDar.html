@@ -774,10 +774,12 @@ $(document).ready(function() {
         prtsArr=$("#prts").val().split("\n")
         
         for(let i=0;i<prtsArr.length;i++){
+            
             let prts=prtsArr[i].split("\t")[1]
             if(prts.indexOf("DOB")>-1){
                 prts=prts.split(" DOB")[0];
             }
+            console.log(prts)
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
@@ -787,6 +789,7 @@ $(document).ready(function() {
                     continue;
                 }
                 if(prtID==="undefined"){
+                    console.log(prts)
                     unde.push(prts)
                 }else{
                     str+=prtID+"\t\t1000\t"+prtID+"\t490078\tCenter Attendance\n"
