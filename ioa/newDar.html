@@ -779,7 +779,7 @@ $(document).ready(function() {
             if(prts.indexOf("DOB")>-1){
                 prts=prts.split(" DOB")[0];
             }
-            console.log(prts)
+            
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
