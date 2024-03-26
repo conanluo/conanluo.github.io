@@ -775,7 +775,7 @@ $(document).ready(function() {
         
         for(let i=0;i<prtsArr.length;i++){
             
-            let prts=prtsArr[i].split("\t")[1]
+            let prts=prtsArr[i].split("\t")[1]+""
             if(prts.indexOf("DOB")>-1){
                 prts=prts.split(" DOB")[0];
             }
