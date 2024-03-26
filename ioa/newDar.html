@@ -232,7 +232,7 @@ $(document).ready(function() {
     "GUANG, GUAN":"PC13164",
     "GUERRA AYALA, ALMA":"490404",
     "GUERRA AYALA, ALMA":"490404",
-    "GUEVAR, JUDITH TERESA":"490406",
+    "GUEVARA, JUDITH TERESA":"490406",
     "GUEVARA, JUDITH":"490406",
     "HANG, MAI SU":"PC23147",
     "HARPER, LINDA":"PC27638",
@@ -783,13 +783,13 @@ $(document).ready(function() {
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
-                if(tempPrtArr.indexOf(prtID)<0){
+                if(tempPrtArr.indexOf(prtID)<0 && prtID!=="undefined"){
                     tempPrtArr.push(prtID);
                 }else{
                     continue;
                 }
                 if(prtID==="undefined"){
-                    console.log(prts)
+                    console.log("------"+prts)
                     unde.push(prts)
                 }else{
                     str+=prtID+"\t\t1000\t"+prtID+"\t490078\tCenter Attendance\n"
