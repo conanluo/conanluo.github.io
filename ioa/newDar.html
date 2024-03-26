@@ -779,19 +779,21 @@ $(document).ready(function() {
             if(prts.indexOf("DOB")>-1){
                 prts=prts.split(" DOB")[0];
             }
-            
+            console.log(prts==="Martinez, Lawrence Benedict"?"1111":"n")
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
                 let prtID=obj[prts.toUpperCase()]+""
-                if(tempPrtArr.indexOf(prtID)<0 && prtID!=="undefined"){
-                    tempPrtArr.push(prtID);
-                }else{
-                    continue;
-                }
+
+                
                 if(prtID==="undefined"){
                     console.log("------"+prts)
                     unde.push(prts)
                 }else{
+                    if(tempPrtArr.indexOf(prtID)<0){
+                        tempPrtArr.push(prtID);
+                    }else{
+                        continue;
+                    }
                     str+=prtID+"\t\t1000\t"+prtID+"\t490078\tCenter Attendance\n"
                     str+=prtID+"\t1530\t\t490078\t"+prtID+"\tBack Home\n"
                 }
