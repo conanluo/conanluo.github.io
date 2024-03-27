@@ -1367,6 +1367,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Lee, Har": {
+        "id": "536566",
+        "room": "2",
+        "rt": "10",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Lee, Lai Yee": {
         "id": "693985",
         "room": "1",
