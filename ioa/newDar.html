@@ -344,7 +344,7 @@ $(document).ready(function() {
     "LEE, GERTRUDE":"PC15238",
     "LEE, GERTRUDE":"PC13594",
     "LEE, GERTRUDE":"PC15238",
-    "LEE, HAR TAM":"536566",
+    "LEE, HAR":"536566",
     "LEE, HAR TAM":"536566",
     "LEE, LAI YEE":"693985",
     "LEE, LAI YEE":"693985",
@@ -786,11 +786,11 @@ $(document).ready(function() {
 
                 
                 if(prtID===undefined){
-                    console.log("------"+prts)
-                    unde.push(prts)
+                    if(unde.indexOf(prts)<0)
+                        unde.push(prts)
                 }else{
-                    if(tempPrtArr.indexOf(prtID)<0){
-                        tempPrtArr.push(prtID);
+                    if(tempPrtArr.indexOf(prts)<0){
+                        tempPrtArr.push(prts);
                     }else{
                         continue;
                     }
@@ -819,8 +819,8 @@ $(document).ready(function() {
             }
             let isNeedTranspo=prtsArr[i].split("\t")[0]==="Y"?true:false;
             if(isNeedTranspo){
-                let prtID=obj[prts.toUpperCase()]+""
-                if(prtID==="undefined"){
+                let prtID=obj[prts.toUpperCase()]
+                if(prtID===undefined){
                     unde.push(prts)
                 }else{
                     str+=prtID+"\t1529\t490078\t"+prtID+"\tMedication\t80\n"
