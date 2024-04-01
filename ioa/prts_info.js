@@ -953,7 +953,7 @@ let prtObjInfo = {
     },
     "Ho, Kim": {
         "id": "PC8520",
-        "room": "",
+        "room": "2",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -961,7 +961,7 @@ let prtObjInfo = {
     },
     "Ho, Kim Yee": {
         "id": "PC11401",
-        "room": "",
+        "room": "2",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1967,6 +1967,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Mok, Nai Tin":{
+        "id": "PC33115",
+        "room": "1",
+        "rt": "1",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Monroy, Alma": {
         "id": "PC9616",
         "room": "",
@@ -2583,6 +2591,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Tsui, Shuk Jee":{
+        "id": "PC33163",
+        "room": "1",
+        "rt": "7",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Tu, David": {
         "id": "490307",
         "room": "1",
@@ -2755,6 +2771,14 @@ let prtObjInfo = {
         "id": "PC24282",
         "room": "",
         "rt": "",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
+    "Williams, Delores":"{
+        "id": "PC32811",
+        "room": "3",
+        "rt": "8",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -3089,8 +3113,8 @@ let prtObjInfo = {
     },
     "Yu, Kwai Ha": {
         "id": "694552",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "2",
         "comeDay": "",
         "address": "",
         "amTime": ""
