@@ -30,13 +30,15 @@
 </style>
 </head>
 <body>
-
-<textarea id="inputText" rows="5" cols="50"></textarea><br>
-<button id="darButton">DAR</button>
-<button id="externalButton">External</button>
-
-<div id="tableTitle"></div> <!-- 用于显示表名 -->
-<div id="userData"></div> <!-- 用于显示用户输入的表格 -->
+<div id="inputArea">
+    <textarea id="inputText" rows="5" cols="50"></textarea><br>
+    <button id="darButton">DAR</button>
+    <button id="externalButton">External</button>
+</div>
+<div id="outputArea">
+    <div id="tableTitle"></div> <!-- 用于显示表名 -->
+    <div id="userData"></div> <!-- 用于显示用户输入的表格 -->
+</div>
 
 <script>
 let size=[ 2 , 2 , 4 , 5 , 3 , 4 , 6 , 4 , 8 , 8 , 4 ]
@@ -48,11 +50,20 @@ for(let i=0;i<size.length;i++){
 }
 // 等待文档加载完成后执行
 $(document).ready(function(){
+
+    // 表头点击事件
+    $("#tableTitle").click(function(){
+        $("#inputArea").show()
+        $("#tableTitle").html("")
+        $("#userData").html("")
+    })
+
     // DAR 按钮点击事件
     $("#darButton").click(function(){
         var inputText = $("#inputText").val();
         displayUserTable(inputText); // 显示用户输入的表格
         // 在这里可以添加 DAR 操作的逻辑
+        $("#inputArea").hide()
     });
 
     // External 按钮点击事件
@@ -62,6 +73,7 @@ $(document).ready(function(){
         $("td").parent("tr").hide()
         $(".EXTERNAL-APPOINTMENT").parent("tr").show();
         // 在这里可以添加 External 操作的逻辑
+        $("#inputArea").hide()
     });
 
     // 显示用户输入的表格的函数
