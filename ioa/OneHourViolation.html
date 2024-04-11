@@ -123,6 +123,8 @@ $("#showTable").html(createTableHtml([...tripsReName, "itineris"], tripsRecordOb
                     let tempTrip = obj.split("\t");
                     let tempObj = {};
                     Object.keys(geoTabTitlesObj).forEach(key => tempObj[geoTabTitlesObj[key].name] = tempTrip[geoTabTitlesObj[key].index]);
+                    tempObj.bDate=new Date(tempObj.bDate)
+                    tempObj.eDate=new Date(tempObj.eDate)
                     geoTabRecordObjArr.push(tempObj);
 
                 })
