@@ -124,7 +124,7 @@ $("#showTable").html(createTableHtml([...tripsReName, "itineris"], tripsRecordOb
                     geoTabRecordObjArr.push(tempObj);
 
                 })
-$("#showTable").html(createTableHtml([...geoTabReName], geoTabRecordObjArr)) //geoTab Record 表
+$("#showTable").html($("#showTable").html()+createTableHtml([...geoTabReName], geoTabRecordObjArr)) //geoTab Record 表
 // =============处理GeoTab Record表的部分  结束=============================== 
 
 // 新建一个table.  Date, Prt Name, Address, Van Number, driver Duration, GeoTab Duration, reason
