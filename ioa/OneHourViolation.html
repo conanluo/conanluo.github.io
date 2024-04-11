@@ -93,8 +93,8 @@ IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 9:13:29 AM		Mar 01, 2024 9
 
                     Object.keys(tripsTitlesObj).forEach(key => tempObj[tripsTitlesObj[key].name] = tempTrip[tripsTitlesObj[key].index]);
                     tempObj.itineris = ((new Date("1980-01-01T" + mDate(tempObj.doTime)) - new Date("1980-01-01T" + mDate(tempObj.puTime))) / 3600000).toFixed(2)
-                    tempObj.puTime=new Date(`${tempObj.date}T${mDate(tempObj.puTime)}`)
-                    tempObj.doTime=new Date(`${tempObj.date}T${mDate(tempObj.doTime)}`)
+                    tempObj.puTime=new Date(`${tempObj.date.replaceAll("/","-")}T${mDate(tempObj.puTime)}`)
+                    tempObj.doTime=new Date(`${tempObj.date.replaceAll("/","-")}T${mDate(tempObj.doTime)}`)
                     if (tempObj.cancel == "" && (tempObj.serverCode != 80) && tempObj.puTime!="" && tempObj.doTime!="" && tempObj.itineris>=1)
                         tripsRecordObjArr.push(tempObj)
                     //console.log(tempTrip)
