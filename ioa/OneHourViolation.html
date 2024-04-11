@@ -11,6 +11,10 @@
     <script src="./js/jQuery.js"></script>
     <!-- 引入 Bootstrap JavaScript 插件 -->
     <script src="./bootstrap.js"></script>
+
+    <!-- 引入 test Data-->
+    <script src=".js/GeoTab.js"></script>
+    <script src=".js/Itineris.js"></script>
 </head>
 
 <body>
@@ -21,26 +25,13 @@
                 <label for="tripsRecord">Trips Record:</label>
                 <!-- 修改textarea的id为"tripsRecord" -->
                 <textarea id="tripsRecord" class="form-control" rows="5"
-                    placeholder="Enter Trips Record here...">Reference Number	Service Date	Appt Type	Division	Service Code	Service Name	Service Subtype	Cancel Reason	Cancel With Charge	Cancel Without Charge	Passenger	DOB	Member ID	Plan ID	LOB	Infectious Disease	Farmout	PU Location	PU Address	DO Location	DO Address	Distance (Miles)	Miles Override	PU Time Ordered	PU Time Actual	DO Time Ordered	DO Time Actual	Appt. Time	Driver	Vehicle ID	Partner Pay Status	Invoice Status	Farmout Pay Date	Farmout Rate	Total Charges	BillTo Contact ID	BillTo Name	PO Number	Reimbursee Contact ID	Reimbursee Name	Reimbursement Type	Reimbursement Service Date	Reimbursee Adreess	Reimbursement Note
-PD1595553	03/01/2024	Clinic	CA04	80	DME & Rx			0	0	Christopher Bello	1949/6/5	14092	PP.490078	Pace		Secure Transportation Northern California	Christopher Bello	345 6th St #307, San Francisco, CA 94103, USA	IOA	3575 Geary Boulevard, San Francisco, CA 94118	3.5		9:20:00	8:56:00	9:45:00	10:23:58	10:00:00	Jerald Alejandro	IOA-19	Final	Pending		1		490078	IOA							
-PD1894386	03/01/2024	Dialysis	CA04	3	Wheelchair			0	0	Gertrude Lee		PC15238	PP.490078	Pace		Secure Transportation Northern California	IOA	3575 Geary Boulevard, San Francisco, CA 94118	Gertrude Lee	259 Broad St, San Francisco, CA 94112, USA	6.6		15:30:00	16:02:48	16:10:27	17:05:53		Mauricio Reina	IOA-15	Final	Pending		0.07		490078	IOA							
-PD1894430	03/01/2024	Center Attendance	CA04	1	Ambulatory			0	0	Pak C. Chu	1937/10/20	2210001651	PP.490078	Pace		Secure Transportation Northern California	Pak C. Chu	1790 9th Avenue, San Francisco, CA 94122	IOA	3575 Geary Boulevard, San Francisco, CA 94118	2.7		9:27:18	9:42:28	9:45:00	9:52:54	10:00:00	Bert Reid	IOA-11	Final	Pending		0.03		490078	IOA							
-PD1894376	03/01/2024	Dialysis	CA04	1	Ambulatory		Cancelled at Door	1	0	Hi Huynh	1942/4/22	2210001891	PP.490078	Pace		Secure Transportation Northern California	IOA	3575 Geary Boulevard, San Francisco, CA 94118	Hi Huynh	848 Kearny Street #713, San Francisco, CA 94108	3.6		15:30:00	15:47:42	15:54:19			Jerald Alejandro	IOA-19	Final	Pending		0		490078	IOA							
-PD1894119	03/01/2024	Clinic	CA04	1	Ambulatory		Return Not Needed	0	1	Ly K Dang		PC31425	PP.490078	Pace		Secure Transportation Northern California	IOA	3575 Geary Boulevard, San Francisco, CA 94118	Ly K Dang	2535 35th Ave, San Francisco, CA 94116, USA	5		15:30:00		15:55:00			Yingyang Chen	IOA-16	Final	Pending		0		490078	IOA							</textarea>
-            </div>
+                    placeholder="Enter Trips Record here..."></div>
             <div class="col-md-6">
                 <!-- 添加label标签 -->
                 <label for="geoTabRecord">GeoTab Record:</label>
                 <!-- 修改textarea的id为"geoTabRecord" -->
                 <textarea id="geoTabRecord" class="form-control" rows="5"
-                    placeholder="Enter GeoTab Record here...">Device	Device Group						Start Date		Stop Date	Driving Duration		Distance		Start Location	Stop Location			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 6:59:16 AM		Mar 01, 2024 7:05:41 AM	0:06		3		2100 Carroll Ave, San Francisco, CA 94124, USA	1100 26th St, San Francisco, CA 94107, USA			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 7:12:15 AM		Mar 01, 2024 7:21:47 AM	0:09		2		1100 26th St, San Francisco, CA 94107, USA	1458 21st Ave, San Francisco, CA 94122, USA			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 8:18:49 AM		Mar 01, 2024 8:51:00 AM	0:32		10		1458 21st Ave, San Francisco, CA 94122, USA	1423 32nd Ave, San Francisco, CA 94122, USA			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 8:57:06 AM		Mar 01, 2024 9:02:17 AM	0:05		1		1423 32nd Ave, San Francisco, CA 94122, USA	1927 32nd Ave, San Francisco, CA 94116, USA			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 9:06:32 AM		Mar 01, 2024 9:09:50 AM	0:03		1		1927 32nd Ave, San Francisco, CA 94116, USA	IOA - San Francisco, CA: 3575 Geary Blvd, San Francisco, CA 94118, USA			
-IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 9:13:29 AM		Mar 01, 2024 9:57:49 AM	0:44		7		IOA - San Francisco, CA: 3575 Geary Blvd, San Francisco, CA 94118, USA	IOA - San Francisco, CA: 3575 Geary Blvd, San Francisco, CA 94118, USA</textarea>
-            </div>
+                    placeholder="Enter GeoTab Record here..."></div>
         </div>
         <div class="row mt-3">
             <div class="col-md-6">
@@ -60,6 +51,11 @@ IOA-11	Vehicle, IOA - San Francisco						Mar 01, 2024 9:13:29 AM		Mar 01, 2024 9
 
 <script>
     $(document).ready(function () {
+
+// 引入 test Data
+$("#tripsRecord").val(itinerisReport)
+$("#geoTabRecord").val(geoReport)
+// 引入 test Data End
         // 点击按钮时的事件
         $("#correctButton").click(function () {     
             // 获取两个textarea框的内容
