@@ -855,6 +855,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Guleng, Ben": {
+        "id": "PC33112",
+        "room": "3",
+        "rt": "4",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Guerra Ayala, Alma": {
         "id": "490404",
         "room": "3",
@@ -2553,8 +2561,8 @@ let prtObjInfo = {
     },
     "Tong, Kam Siu": {
         "id": "PC8549",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "10",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -2737,8 +2745,8 @@ let prtObjInfo = {
     },
     "Washington, Betty": {
         "id": "694487",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "8",
         "comeDay": "",
         "address": "",
         "amTime": ""
