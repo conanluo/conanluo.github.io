@@ -487,6 +487,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Chow, Wan Chung": {
+        "id": "PC32911",
+        "room": "1",
+        "rt": "7",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Chow, Yau Soong": {
         "id": "PC11182",
         "room": "1",
@@ -529,7 +537,7 @@ let prtObjInfo = {
     },
     "Chu, Clyde Y": {
         "id": "693624",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -569,7 +577,7 @@ let prtObjInfo = {
     },
     "Chu, Yin": {
         "id": "693625",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1177,7 +1185,7 @@ let prtObjInfo = {
     },
     "Keung, Ping Wan": {
         "id": "PC11514",
-        "room": "",
+        "room": "2",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -2465,8 +2473,8 @@ let prtObjInfo = {
     },
     "Tam, Wai Ken": {
         "id": "490313",
-        "room": "",
-        "rt": "",
+        "room": "1",
+        "rt": "4",
         "comeDay": "",
         "address": "",
         "amTime": ""
