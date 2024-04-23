@@ -1177,7 +1177,7 @@ let prtObjInfo = {
     },
     "Keung, Ping W": {
         "id": "PC8527",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -1489,7 +1489,7 @@ let prtObjInfo = {
     },
     "Leung, Hung Chun": {
         "id": "PC29600",
-        "room": "",
+        "room": "1",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -2625,7 +2625,7 @@ let prtObjInfo = {
     },
     "Tsui, Shuk Jee":{
         "id": "PC33163",
-        "room": "1",
+        "room": "2",
         "rt": "7",
         "comeDay": "",
         "address": "",
