@@ -3288,3 +3288,13 @@ let prtObjInfo = {
         "amTime": ""
     }
 }
+function getForDAR(){
+    let res={};
+    Object.keys(prtObjInfo).forEach(prtName=>{
+        res={...res,{prtName:prtName.id}}
+    })
+    return res
+}
+
+
+
