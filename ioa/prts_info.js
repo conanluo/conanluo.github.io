@@ -3292,7 +3292,7 @@ function getForDAR(){
     let res={};
     Object.keys(prtObjInfo).forEach(prtName=>{
         //res={...res,{prtName:prtName.id}}
-        res[prtName]=prtObjInfo[prtName].id
+        res[prtName.toUpperCase()]=prtObjInfo[prtName].id
     })
     return res
 }
