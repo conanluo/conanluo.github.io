@@ -799,7 +799,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Garcia-Maldonado, Aurelia": {
+    "Garcia Maldonado, Aurelia": {
         "id": "693773",
         "room": "3",
         "rt": "5",
@@ -921,7 +921,7 @@ let prtObjInfo = {
     },
     "He, Yu": {
         "id": "693842",
-        "room": "",
+        "room": "2",
         "rt": "",
         "comeDay": "",
         "address": "",
@@ -985,8 +985,8 @@ let prtObjInfo = {
     },
     "Horne, Ronald W": {
         "id": "693877",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "4",
         "comeDay": "",
         "address": "",
         "amTime": ""
@@ -1953,8 +1953,8 @@ let prtObjInfo = {
     },
     "Mengesha, Hiwan": {
         "id": "694118",
-        "room": "",
-        "rt": "",
+        "room": "3",
+        "rt": "8",
         "comeDay": "",
         "address": "",
         "amTime": ""
