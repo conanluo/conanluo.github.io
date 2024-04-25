@@ -2311,6 +2311,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Randleston, Edward C.": {
+        "id": "694276",
+        "room": "3",
+        "rt": "",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Randleston, Edward": {
         "id": "694276",
         "room": "3",
