@@ -647,7 +647,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Dang, Tony": {
+    "Dang, Tony T": {
         "id": "693664",
         "room": "",
         "rt": "",
@@ -1063,7 +1063,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Hui, Wai Chan Ngai": {
+    "Hui, Wai Chun Ngai": {
         "id": "PC8522",
         "room": "",
         "rt": "",
