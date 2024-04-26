@@ -159,6 +159,14 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
+    "Burr, Sandra Jeanne": {
+        "id": "693544",
+        "room": "2",
+        "rt": "4",
+        "comeDay": "",
+        "address": "",
+        "amTime": ""
+    },
     "Cabrera De Interiano, Elva": {
         "id": "693551",
         "room": "3",
