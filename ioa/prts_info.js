@@ -767,7 +767,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Fischer, Felizitas": {
+    "Fischer, Felizitas M": {
         "id": "693736",
         "room": "3",
         "rt": "2",
