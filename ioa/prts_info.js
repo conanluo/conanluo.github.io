@@ -887,7 +887,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Guevar, Judith Teresa": {
+    "Guevara, Judith Teresa": {
         "id": "490406",
         "room": "2",
         "rt": "2",
@@ -1863,7 +1863,7 @@ let prtObjInfo = {
         "address": "",
         "amTime": ""
     },
-    "Majher, John": {
+    "Majher, John J.": {
         "id": "694066",
         "room": "",
         "rt": "",
